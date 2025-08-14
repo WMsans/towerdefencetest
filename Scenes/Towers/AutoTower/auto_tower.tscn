@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dl6lcrqvbg2gf"]
+
+[ext_resource type="Script" uid="uid://dteof3kk1b84v" path="res://Scenes/Towers/AutoTower/auto_tower.gd" id="1_e8x56"]
+[ext_resource type="PackedScene" uid="uid://dnyfrxbyt0cx8" path="res://Scenes/Bullet/bullet.tscn" id="2_1dwsi"]
+[ext_resource type="Texture2D" uid="uid://be807niuxrr4v" path="res://icon.svg" id="2_5ruip"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ruip"]
+
+[node name="AutoTower" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_e8x56")
+Bullet = ExtResource("2_1dwsi")
+
+[node name="ShootTimer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(87, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_5ruip")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(5.015, 5.015)
+shape = SubResource("RectangleShape2D_5ruip")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6o6a2cwptwjq"]
+
+[ext_resource type="PackedScene" uid="uid://dl6lcrqvbg2gf" path="res://Scenes/Towers/AutoTower/auto_tower.tscn" id="1_ebmjs"]
+[ext_resource type="PackedScene" uid="uid://cbihf2fr86gcq" path="res://Scenes/Towers/ReactiveTower/reactive_tower.tscn" id="2_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://cuhbhreffksph" path="res://Scenes/MainCamera/main_camera.tscn" id="3_wrm1d"]
+
+[node name="game" type="Node2D"]
+
+[node name="AutoTower" parent="." instance=ExtResource("1_ebmjs")]
+position = Vector2(-316, -180)
+
+[node name="ReactiveTower" parent="." instance=ExtResource("2_qxrlw")]
+position = Vector2(163, -149)
+rotation = 1.97224
+
+[node name="MainCamera" parent="." instance=ExtResource("3_wrm1d")]
